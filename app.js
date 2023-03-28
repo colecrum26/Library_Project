@@ -3,10 +3,10 @@ console.log("PROJECT:\n==========\n");
 
 const books = [
   {
-    id: 1,
-    title: "Name of the Wind",
-    author: "Patrick Rothfuss",
-    read: true,
+    id: 0,
+    title: "",
+    author: "",
+    read: false,
   },
 ];
 
@@ -47,7 +47,6 @@ class Library {
 
     const newTr = document.createElement("tr");
     newTr.classList.add(book ? book.id : newBook.id);
-    console.log("made it this far")
     newTr.addEventListener("dblclick", () => {
       this.removeBook(book ? book.id : newBook.id);
     });
@@ -69,8 +68,6 @@ class Library {
     });
     newCheckbox.checked = book ? book.read : read.checked;
     newCheckbox.disabled = book ? book.read : read.checked;
-
-    
 
     newRead.appendChild(newCheckbox);
     newTr.appendChild(newTitle);

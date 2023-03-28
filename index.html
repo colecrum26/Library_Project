@@ -3,19 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library Project</title>
+    <title>Online Library</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <main
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      "
-    >
+    <main>
       <div>
-        <h1>Library Project</h1>
+        <h1 id="header">Use the Form Below to Track Your Reading!</h1>
         <form action="" id="form">
           <div class="form-group">
             <label for="title">Title</label>
@@ -39,7 +34,7 @@
           <!-- Add table here -->
           <table id="table" style="min-width: 680px; margin: 2rem">
             <thead>
-              <tr>
+              <tr class="formHead">
                 <th>Title</th>
                 <th>Author</th>
                 <th>Read</th>

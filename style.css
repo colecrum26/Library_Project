@@ -1,3 +1,26 @@
-body{
-    background-color: antiquewhite;
+body {
+  background-color: antiquewhite;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+#header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+}
+
+#library {
+    text-align: center;
+}
+
