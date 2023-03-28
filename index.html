@@ -16,6 +16,25 @@
     >
       <div>
         <h1>Library Project</h1>
+        <form action="" id="form">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" 
+            placeholder="Enter Book Title" required>
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" 
+            placeholder="Enter Book Author" required>
+          </div>
+          <div class="form-group">
+            <label for="read">Read</label>
+            <input type="checkbox" name="read" id="read">
+          </div>
+          <div class="form-group">
+            <button type="submit" id="submitBtn">Add Your book!</button>
+          </div>
+        </form>
         <div id="library">
           <!-- Add table here -->
           <table id="table" style="min-width: 680px; margin: 2rem">
@@ -26,21 +45,9 @@
                 <th>Read</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+            <tbody id="tableBody">
             </tbody>
           </table>
-        <div class="inputBoxes">
-          <input type="text" id="bookTitle" placeholder="Enter Book Title">
-                <label for="bookTitle">Title</label>
-                <input type="text" id="bookAuthor" placeholder="Enter Book Author">
-                <label for="bookAuthor">Author</label>
-                <input type="checkbox" name="read" id="readLibraryCheckbox"/>
-        </div>
         </div>
     </main>
 
