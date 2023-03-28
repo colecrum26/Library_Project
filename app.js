@@ -23,19 +23,17 @@ class Library {
   constructor(books) {
     this.books = books;
     this.nextId = books.length;
-    this.bookCount = books.length;
   }
 
   addBook(book) {
-    let newBook;
     if (!book) {
       // Selects the inputs from the form
-      const title = document.getElementById("title");
-      const author = document.getElementById("author");
-      const read = document.getElementById("read");
+      var title = document.getElementById("title");
+      var author = document.getElementById("author");
+      var read = document.getElementById("read");
       this.nextId++;
       // Creates an instance from the Book class
-      const newBook = new Book(
+      var newBook = new Book(
         this.nextId,
         title.value,
         author.value,
@@ -49,7 +47,8 @@ class Library {
 
     const newTr = document.createElement("tr");
     newTr.classList.add(book ? book.id : newBook.id);
-    newTr.addEventListener("dblclick", (event) => {
+    console.log("made it this far")
+    newTr.addEventListener("dblclick", () => {
       this.removeBook(book ? book.id : newBook.id);
     });
 
