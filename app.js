@@ -1,15 +1,7 @@
 // PROJECT Section
 console.log("PROJECT:\n==========\n");
 
-const books = [
-  {
-    id: 0,
-    title: "",
-    author: "",
-    read: false,
-  },
-];
-
+const books = [];
 class Book {
   constructor(id, title, author, read) {
     this.id = id;
@@ -76,6 +68,7 @@ class Library {
     newTr.appendChild(favBox);
 
     tBody.appendChild(newTr);
+    console.log(newBook)
   }
 
   markRead(checkbox, id) {
@@ -109,3 +102,4 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   library.addBook();
 });
+
