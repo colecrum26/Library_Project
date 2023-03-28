@@ -55,6 +55,9 @@ class Library {
     const newTitle = document.createElement("td");
     const newAuthor = document.createElement("td");
     const newRead = document.createElement("td");
+    const favBox = document.createElement("input");
+    favBox.type = "checkbox";
+    favBox.id = "favBox";
 
     newTitle.textContent = book ? book.title : newBook.title;
     newAuthor.textContent = book ? book.author : newBook.author;
@@ -67,10 +70,13 @@ class Library {
     newCheckbox.checked = book ? book.read : read.checked;
     newCheckbox.disabled = book ? book.read : read.checked;
 
+    
+
     newRead.appendChild(newCheckbox);
     newTr.appendChild(newTitle);
     newTr.appendChild(newAuthor);
     newTr.appendChild(newRead);
+    newTr.appendChild(favBox);
 
     tBody.appendChild(newTr);
   }
