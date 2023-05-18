@@ -1,6 +1,3 @@
-// PROJECT Section
-console.log("PROJECT:\n==========\n");
-
 const books = [];
 class Book {
   constructor(id, title, author, read) {
@@ -35,6 +32,7 @@ class Library {
       this.books.push(newBook);
     }
 
+    // Main return
     const tBody = document.getElementById("tableBody");
 
     const newTr = document.createElement("tr");
@@ -43,6 +41,7 @@ class Library {
       this.removeBook(book ? book.id : newBook.id);
     });
 
+    // React return component
     const newTitle = document.createElement("td");
     const newAuthor = document.createElement("td");
     const newRead = document.createElement("td");
@@ -71,9 +70,8 @@ class Library {
     console.log(newBook)
   }
 
+  // Helpers
   markRead(checkbox, id) {
-    console.log(checkbox);
-    console.log(id);
     this.books.forEach((book) => {
       if (id === book.id) {
         book.read = true;
@@ -98,6 +96,7 @@ if (books.length > 0) {
 
 const form = document.getElementById("form");
 
+// Main component
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   library.addBook();
